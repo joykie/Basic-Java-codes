@@ -1,0 +1,73 @@
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class MakeRandomCharacters {
+    public static int totalLetters = 0;
+    public static int totalDigit= 0;
+    public static int totalSpaces = 0;
+    public static int totalSpecial = 0;
+    
+            
+
+  
+    public static void main(String[] args)
+    {
+    Scanner kb = new Scanner(System.in);
+    Random rand =new Random();
+    char randomChar ;
+    
+    for (int x= 0: x<20 ; x++)
+	{
+		randomChar = makeRandomCharacter();
+		System.out.println(randomChar+ " " + whatIsIt(randomChar);
+	}
+	double per = totalLetters/20.0 *100;
+	System.out.println("Percentages letters: " + per);
+	per = totalDigit/20.0 *100;
+	System.out.println("Percentages digit: " + per);
+	per = totalSpaces/20.0 *100;
+	System.out.println("Percentages spaces: " + per);
+	per = totalSpecial/20.0 *100;
+	System.out.println("Percentages special: " + per);
+	
+	
+	
+    
+    
+    }// end of main
+    
+    public static char makeRandomCharacter()
+    {
+        Random randomizer = new Random();
+        char cChar  ;
+        cChar = (char) randomizer.nextInt(501);
+        
+        return cChar;
+            
+    }
+    public static String whatIsIt(char cChar)
+    {
+      String  sMessage ="";
+     
+      
+      if (Character.isLetter(cChar))
+      {
+          return  sMessage = "Character is a letter";            
+      }
+      else if(Character.isDigit(cChar)) 
+      {
+          return  sMessage = "Character is a digit"  ; 
+      }
+      else if(Character.isSpaceChar(cChar))
+      {
+          return  sMessage = "Character is a space " ;
+      }
+      else 
+      {
+          return sMessage = "Character is a special character";
+      }
+          
+      
+    }
+}
